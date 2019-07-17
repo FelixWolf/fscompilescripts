@@ -1,0 +1,34 @@
+diff -r b6355942d907 indra/newview/viewer_manifest.py
+--- a/indra/newview/viewer_manifest.py	Sat Jul 06 19:11:06 2019 +0200
++++ b/indra/newview/viewer_manifest.py	Wed Jul 17 10:28:28 2019 -0400
+@@ -2096,8 +2096,8 @@
+         #installer_name = self.installer_base_name()
+ 
+         self.fs_delete_linux_symbols() # <FS:ND/> Delete old syms
+-        self.strip_binaries()
+-        self.fs_save_linux_symbols() # <FS:ND/> Package symbols, add debug link
++        #self.strip_binaries()
++        #self.fs_save_linux_symbols() # <FS:ND/> Package symbols, add debug link
+         self.fs_setuid_chromesandbox() # <FS:ND/> Chown chrome-sandbox to root:root and set the setuid bit
+ 
+         # Fix access permissions
+@@ -2116,7 +2116,8 @@
+         self.run_command(["mv", realname, tempname])
+         try:
+             # only create tarball if it's a release build.
+-            if self.args['buildtype'].lower() == 'release':
++            #EDIT: Disable packaging tar.xz
++            if False and self.args['buildtype'].lower() == 'release':
+                 # --numeric-owner hides the username of the builder for
+                 # security etc.
+                 self.run_command(['tar', '-C', self.get_build_prefix(),
+@@ -2129,7 +2130,8 @@
+             self.run_command(["mv", tempname, realname])
+ 
+     def strip_binaries(self):
+-        if self.args['buildtype'].lower() == 'release' and self.is_packaging_viewer():
++        #EDIT: Disable stripping
++        if False and self.args['buildtype'].lower() == 'release' and self.is_packaging_viewer():
+             print "* Going strip-crazy on the packaged binaries, since this is a RELEASE build"
+             # makes some small assumptions about our packaged dir structure
+             self.run_command(
