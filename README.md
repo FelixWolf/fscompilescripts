@@ -1,5 +1,7 @@
 # fscompilescripts
-Scripts I use to compile FS on linux and what not
+Scripts I use to compile FS on linux and what not.
+
+These scripts are provided **WITHOUT SUPPORT** and **are not official Firestorm development scripts**. I am only posting them for convenience purposes.
 
 # Setup
 ```bash
