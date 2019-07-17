@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#FS directories
+phoenix-firestorm-lgpl/
+fs-build-variables/
+packages/
+patches/
+logs/
+
 # C extensions
 *.so
 
