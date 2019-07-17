@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+#Build variables
+export AUTOBUILD_VARIABLES_FILE=$PWD/fs-build-variables/variables
+export AUTOBUILD_ADDRSIZE=64
+export BUILD_TIMESTAMP=$(date +"%Y%m%d%H%M%S")
+export BUILD_CHANNEL="<CHANGEME>"
+
+cd phoenix-firestorm-lgpl
+#Configure
+autobuild configure -A 64 -c ReleaseFS -v -- --package --chan $BUILD_CHANNEL -DLL_TESTS:BOOL=FALSE -DRELEASE_CRASH_REPORTING:BOOL=OFF -DHAVOK:BOOL=OFF | tee ../logs/configure-$BUILD_TIMESTAMP.log
+cp ../logs/configure-$BUILD_TIMESTAMP.log ../logs/configure-latest.log
