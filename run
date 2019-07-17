@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#Run test viewer
+export LL_WRAPPER="gdb -ex run --args"
+phoenix-firestorm-lgpl/build-linux-x86_64/newview/packaged/firestorm
