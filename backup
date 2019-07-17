@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Removing old backup..."
+rm -rfv /opt/firestorm.backup/* | pv -l -s $( du -a "/opt/firestorm.backup/" | wc -l ) > /dev/null
+
+echo "Moving current install..."
+mv -v /opt/firestorm/* "/opt/firestorm.backup/" | pv -l -s $( du -a "/opt/firestorm/" | wc -l ) > /dev/null
