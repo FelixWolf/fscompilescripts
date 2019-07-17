@@ -8,8 +8,6 @@
 
 # viewer_manifest.py.diff
 This disables three things:
-* Stripping
-* Symbol saving
-* Packaging(into a .tar.gz)
-
-We don't need stripping since we are developing, we don't need to save symbols since we didn't strip symbols, and we don't need packaging because we are not sending it anywhere.
+* Stripping - We don't need stripping since we are developing
+* Symbol saving - We don't need to save symbols since we didn't strip symbols
+* Packaging(into a .tar.gz) - We don't need packaging because we are not sending it anywhere
