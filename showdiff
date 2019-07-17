@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+diff --color=always "$DIR/myFSChanges/newview/$1" "$DIR/phoenix-firestorm-lgpl/indra/newview/$1"
