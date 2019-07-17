@@ -5,7 +5,7 @@
 **THESE SCRIPTS ARE DIRTY HACKS USED FOR SPEEDING UP BUILD TIME AND SHOULD NOT BE USED IN A PRODUCTION BUILD**
 **USE AT YOUR OWN RISK**
 
-Really these should just be made as parameters, not removing code or putting `or false` in places.
+These should just be made as parameters, not removing code or putting `or false` in places.
 
 # viewer_manifest.py.diff
 This disables three things:
