@@ -44,3 +44,6 @@ This runs the build without installing it, also enables GDB.
 
 ## Showdiff
 Shows current diffs from them main branch.
+
+# The `dev_diffs` folder
+**THESE ARE VERY DIRTY HACKS** used to speed up compile time. Do not use these in production, you have been warned!
