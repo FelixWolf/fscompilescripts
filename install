@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Removing old build..."
+rm -rfv /opt/firestorm/* | pv -l -s $( du -a "/opt/firestorm/" | wc -l ) > /dev/null
+
+echo "Copying new build..."
+cp -rv "/mnt/TheHyenaDrive/source/games/firestorm/phoenix-firestorm-lgpl/build-linux-x86_64/newview/packaged/." "/opt/firestorm/" | pv -l -s $( du -a "/mnt/TheHyenaDrive/source/games/firestorm/phoenix-firestorm-lgpl/build-linux-x86_64/newview/packaged" | wc -l ) > /dev/null
